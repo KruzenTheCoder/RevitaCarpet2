@@ -30,7 +30,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 lg:py-28 bg-surface">
+    <section id="how-it-works" className="py-12 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -38,21 +38,21 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-8 lg:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-3 py-1 lg:px-4 lg:py-1.5 bg-primary/10 text-primary text-xs lg:text-sm font-semibold rounded-full mb-3 lg:mb-4">
             Simple Process
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-3 lg:mb-4">
             How It Works
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-sm lg:text-lg text-gray-600">
             Three simple steps to transform your home from tired to revitalized.
           </p>
         </motion.div>
 
         {/* Steps */}
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -72,19 +72,19 @@ export default function HowItWorks() {
                 </div>
               )}
 
-              <div className="relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+              <div className="relative bg-white rounded-2xl p-5 lg:p-8 shadow-sm border border-gray-100 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
                 {/* Step Number */}
-                <div className={`absolute -top-4 -right-4 w-12 h-12 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}>
-                  <span className="text-white font-bold text-lg">{step.number}</span>
+                <div className={`absolute -top-3 -right-3 lg:-top-4 lg:-right-4 w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}>
+                  <span className="text-white font-bold text-sm lg:text-lg">{step.number}</span>
                 </div>
 
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-2xl ${step.bgColor} flex items-center justify-center mb-6`}>
-                  <step.icon className="w-8 h-8 text-primary" />
+                <div className={`w-12 h-12 lg:w-16 lg:h-16 rounded-2xl ${step.bgColor} flex items-center justify-center mb-4 lg:mb-6`}>
+                  <step.icon className="w-6 h-6 lg:w-8 lg:h-8 text-primary" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-3">{step.title}</h3>
+                <p className="text-xs lg:text-sm text-gray-600 leading-relaxed">{step.description}</p>
               </div>
             </motion.div>
           ))}

@@ -11,9 +11,9 @@ const results = [
 
 export default function Results() {
   return (
-    <section id="results" className="py-20 lg:py-28 bg-white overflow-hidden">
+    <section id="results" className="py-12 lg:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           {/* Left - Slider */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -24,9 +24,9 @@ export default function Results() {
             <BeforeAfterSlider
               beforeImage="/images/Alternative_pictures_of_like_a_202605060948.jpeg"
               afterImage="/images/The_after_of_this_picture_202605060948.jpeg"
-              className="w-full aspect-[4/3]"
+              className="w-full aspect-[4/3] lg:aspect-[4/3]"
             />
-            <p className="text-center text-sm text-gray-500 mt-4">
+            <p className="text-center text-xs lg:text-sm text-gray-500 mt-2 lg:mt-4">
               Drag the slider to see the transformation
             </p>
           </motion.div>
@@ -37,16 +37,16 @@ export default function Results() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.7 }}
-            className="space-y-8"
+            className="space-y-6 lg:space-y-8"
           >
             <div>
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+              <span className="inline-block px-3 py-1 lg:px-4 lg:py-1.5 bg-primary/10 text-primary text-xs lg:text-sm font-semibold rounded-full mb-3 lg:mb-4">
                 Real Results
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-3 lg:mb-4">
                 See the <span className="text-gradient">Difference</span>
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-lg text-gray-600 leading-relaxed">
                 Vacuuming only skims the surface. Our advanced hot-water extraction process reaches the base of every fibre, removing 99% of bacteria, allergens, and stubborn stains you thought were permanent.
               </p>
             </div>
@@ -62,18 +62,18 @@ export default function Results() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-4">
-              <div className="text-center p-4 rounded-xl bg-surface border border-gray-100">
-                <p className="text-3xl font-bold text-primary">500+</p>
-                <p className="text-sm text-gray-500 mt-1">Homes Cleaned</p>
+            <div className="grid grid-cols-3 gap-3 lg:gap-4 pt-4">
+              <div className="text-center p-3 lg:p-4 rounded-xl bg-surface border border-gray-100">
+                <p className="text-2xl lg:text-3xl font-bold text-primary">500+</p>
+                <p className="text-xs lg:text-sm text-gray-500 mt-1">Homes Cleaned</p>
               </div>
-              <div className="text-center p-4 rounded-xl bg-surface border border-gray-100">
-                <p className="text-3xl font-bold text-primary">4.9</p>
-                <p className="text-sm text-gray-500 mt-1">Star Rating</p>
+              <div className="text-center p-3 lg:p-4 rounded-xl bg-surface border border-gray-100">
+                <p className="text-2xl lg:text-3xl font-bold text-primary">4.9</p>
+                <p className="text-xs lg:text-sm text-gray-500 mt-1">Star Rating</p>
               </div>
-              <div className="text-center p-4 rounded-xl bg-surface border border-gray-100">
-                <p className="text-3xl font-bold text-primary">100%</p>
-                <p className="text-sm text-gray-500 mt-1">Satisfaction</p>
+              <div className="text-center p-3 lg:p-4 rounded-xl bg-surface border border-gray-100">
+                <p className="text-2xl lg:text-3xl font-bold text-primary">100%</p>
+                <p className="text-xs lg:text-sm text-gray-500 mt-1">Satisfaction</p>
               </div>
             </div>
           </motion.div>

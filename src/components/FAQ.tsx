@@ -34,15 +34,15 @@ function FAQItem({ question, answer, isOpen, onClick }: { question: string; answ
     <div className="border border-gray-100 rounded-2xl overflow-hidden bg-white hover:border-gray-200 transition-colors">
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between p-6 text-left"
+        className="w-full flex items-center justify-between p-4 lg:p-6 text-left"
       >
-        <span className="font-semibold text-gray-900 pr-4">{question}</span>
+        <span className="font-semibold text-gray-900 pr-4 text-sm lg:text-base">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}
           className="flex-shrink-0"
         >
-          <ChevronDown className="w-5 h-5 text-gray-500" />
+          <ChevronDown className="w-4 h-4 lg:w-5 lg:h-5 text-gray-500" />
         </motion.div>
       </button>
       <AnimatePresence initial={false}>
@@ -53,7 +53,7 @@ function FAQItem({ question, answer, isOpen, onClick }: { question: string; answ
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+            <div className="px-4 lg:px-6 pb-4 lg:pb-6 text-gray-600 leading-relaxed text-xs lg:text-sm">
               {answer}
             </div>
           </motion.div>
@@ -67,7 +67,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-white">
+    <section id="faq" className="py-12 lg:py-28 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -75,15 +75,15 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 lg:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-3 py-1 lg:px-4 lg:py-1.5 bg-primary/10 text-primary text-xs lg:text-sm font-semibold rounded-full mb-3 lg:mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-3 lg:mb-4">
             Common Questions
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-sm lg:text-lg text-gray-600">
             Everything you need to know about our carpet cleaning service.
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="space-y-4"
+          className="space-y-3 lg:space-y-4"
         >
           {faqs.map((faq, index) => (
             <FAQItem
@@ -113,12 +113,12 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 text-center"
+          className="mt-8 lg:mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-4 bg-surface rounded-2xl border border-gray-100">
-            <HelpCircle className="w-5 h-5 text-primary" />
-            <span className="text-gray-600">Still have questions?</span>
-            <a href="tel:+10000000000" className="font-semibold text-primary hover:text-primary-dark transition-colors">
+          <div className="inline-flex items-center gap-2 lg:gap-3 px-4 lg:px-6 py-3 lg:py-4 bg-surface rounded-2xl border border-gray-100">
+            <HelpCircle className="w-4 h-4 lg:w-5 lg:h-5 text-primary" />
+            <span className="text-gray-600 text-xs lg:text-sm">Still have questions?</span>
+            <a href="tel:+10000000000" className="font-semibold text-primary hover:text-primary-dark transition-colors text-xs lg:text-sm">
               Call us anytime
             </a>
           </div>
