@@ -22,8 +22,8 @@ export default function Results() {
             transition={{ duration: 0.7 }}
           >
             <BeforeAfterSlider
-              beforeImage="/images/clean-carpet.jpg"
-              afterImage="/images/clean-carpet.jpg"
+              beforeImage="/images/Alternative_pictures_of_like_a_202605060948.jpeg"
+              afterImage="/images/The_after_of_this_picture_202605060948.jpeg"
               className="w-full aspect-[4/3]"
             />
             <p className="text-center text-sm text-gray-500 mt-4">
